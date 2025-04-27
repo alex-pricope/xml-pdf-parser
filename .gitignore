@@ -19,3 +19,4 @@
 /docs
 /tests/integration/out/
 /bin/parser
+tests/payload/valid_xml_tag.pdf

@@ -1,3 +1,5 @@
+[![Build Status](https://github.com/alex-pricope/form-parser/actions/workflows/ci.yml/badge.svg)](https://github.com/alex-pricope/form-parser/actions/workflows/ci.yml)
+
 ## Problem
 We need to parse a given `input file` (XML initially), together with user submission data, and generate an `output file` (PDF) for now. 
 

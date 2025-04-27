@@ -126,7 +126,7 @@ Targets
 * The items on the XML have unique names - the only way to get to them with separate user submission file
 
 #### Libraries 
-* Cobra - for building great CLI
-* Logrus - great logging library
-* Testify - for great assertions
-* gofpdf - picked this one to render the PDF
+* [Cobra](https://github.com/spf13/cobra) - for building great CLI
+* [Logrus](https://github.com/sirupsen/logrus) - great logging library
+* [Testify](https://github.com/stretchr/testify) - for great assertions
+* [gofpdf](https://github.com/jung-kurt/gofpdf) - picked this one to render the PDF, archived and not maintained anymore but good for this exercise

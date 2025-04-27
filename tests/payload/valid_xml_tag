@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form>
+	<Field Name="program_language" Type="Enumeration(A,B,C)" Optional="False" FieldType="Select">
+		<Caption>Pick your programing language</Caption>
+		<Labels>
+			<Label Name="A">A(+)</Label>
+			<Label Name="B">B</Label>
+			<Label Name="C">C (All flavors except C#)</Label>
+		</Labels>
+	</Field>
+	<Section Name="experience" Optional="False">
+		<Title>Regarding your experience</Title>
+		<Contents>
+			<Field Name="other" Type="Text([0,200],Lines:4)" Optional="True" FieldType="TextBox">
+				<Caption>Other programming experiences</Caption>
+			</Field>
+			<Field Name="code_repos" Type="File" Optional="True" FieldType="File">
+				<Caption>Upload your code repo's in ZIP.</Caption>
+			</Field>
+		</Contents>
+	</Section>
+</Form>

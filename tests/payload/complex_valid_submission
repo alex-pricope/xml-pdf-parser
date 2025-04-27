@@ -1,0 +1,9 @@
+{
+    "user_name": "Some Name Sr",
+    "birth_date": "20-05-2000",
+    "gender": "F",
+    "street": "123 Main Street, Apt 4B",
+    "country": "Netherlands",
+    "region": "North Hollands",
+    "email": "some.name@example.com"
+}

@@ -1,0 +1,48 @@
+<Form>
+    <Field Name="user_name" Type="Text([0,100],Lines:1)" Optional="False" FieldType="TextBox">
+        <Caption>Enter your name</Caption>
+    </Field>
+
+    <Section Name="personal_info" Optional="False">
+        <Title>Personal Information</Title>
+        <Contents>
+            <Field Name="birth_date" Type="Date" Optional="False" FieldType="TextBox">
+                <Caption>Birth Date</Caption>
+            </Field>
+            <Field Name="gender" Type="Enumeration(M,F,O)" Optional="True" FieldType="Select">
+                <Caption>Gender</Caption>
+                <Labels>
+                    <Label Name="M">Male</Label>
+                    <Label Name="F">Female</Label>
+                    <Label Name="O">Other</Label>
+                </Labels>
+            </Field>
+        </Contents>
+    </Section>
+
+    <Section Name="address" Optional="True">
+        <Title>Address Details</Title>
+        <Contents>
+            <Field Name="street" Type="Text([0,200],Lines:2)" Optional="False" FieldType="TextBox">
+                <Caption>Street Address</Caption>
+            </Field>
+
+            <Section Name="country_region" Optional="True">
+                <Title>Country and Region</Title>
+                <Contents>
+                    <Field Name="country" Type="Text([0,100],Lines:1)" Optional="False" FieldType="TextBox">
+                        <Caption>Country</Caption>
+                    </Field>
+                    <Field Name="region" Type="Text([0,100],Lines:1)" Optional="True" FieldType="TextBox">
+                        <Caption>Region</Caption>
+                    </Field>
+                </Contents>
+            </Section>
+
+        </Contents>
+    </Section>
+
+    <Field Name="email" Type="Text([0,100],Lines:1)" Optional="True" FieldType="TextBox">
+        <Caption>Email Address</Caption>
+    </Field>
+</Form>

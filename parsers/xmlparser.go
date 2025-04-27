@@ -49,8 +49,6 @@ func (p *XMLParser) parseXMLContent(content []byte) (*models.ContentNode, error)
 	*/
 	dec := xml.NewDecoder(bytes.NewReader(content))
 	var root *models.ContentNode
-
-	// Use an array like a stack
 	var stack []*models.ContentNode
 
 	for {

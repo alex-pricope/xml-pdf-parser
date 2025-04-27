@@ -132,3 +132,6 @@ Targets
 * [Logrus](https://github.com/sirupsen/logrus) - great logging library
 * [Testify](https://github.com/stretchr/testify) - for great assertions
 * [gofpdf](https://github.com/jung-kurt/gofpdf) - picked this one to render the PDF, archived and not maintained anymore but good for this exercise
+
+#### Github Actions pipeline
+I also included a `GHA pipeline` that executes `make all` after every push. 

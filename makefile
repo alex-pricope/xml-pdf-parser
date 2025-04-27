@@ -11,4 +11,5 @@ build:
 	go build -o bin/parser .
 
 test:
+	mkdir -p tests/integration/out
 	go test ./...

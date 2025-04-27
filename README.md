@@ -32,7 +32,8 @@ The result should be a PDF file rendering the components and user submission dat
 ### Command Utility
 I decided to create a utility `command` using Cobra library. This small program can run from anywhere amd has self explaining flags.
 
-(insert pic here)
+![image](https://github.com/user-attachments/assets/25064638-8d3c-4a55-8421-6e670753abb2)
+
 
 ### Usage:
 * Step 1: Build the binary (run the below from repo root) - this will build the `parser` binary in `/bin` folder

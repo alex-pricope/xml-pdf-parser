@@ -30,8 +30,7 @@ The input XML is:
 ```
 The result should be a PDF file rendering the components and user submission data.
 
-## What I did
-### Command Utility
+## Command Utility
 I decided to create a utility `command` using Cobra library. This small program can run from anywhere amd has self explaining flags.
 
 ![image](https://github.com/user-attachments/assets/25064638-8d3c-4a55-8421-6e670753abb2)
@@ -55,17 +54,14 @@ I decided to create a utility `command` using Cobra library. This small program 
 #### Generic components
 I wanted to have `extensibility, simplicity and testability` so, for this, I used 3 major components:
 * **_Reader_** (interface) - Reads files
-* **_Parser_** (interface) + **_Factory pattern_** - This allows me to have multiple Parsers, for this exercise I only did the `XMLParser`
-* **_Renderer_** (interface) + **_Factory pattern_** - Same as above, we can have multiple Renderers, I only implemented the `PDFRenderer`
+* **_Parser_** (interface) + **_Factory pattern_** - This allows me to have multiple Parsers, for now, only `XMLParser`
+* **_Renderer_** (interface) + **_Factory pattern_** - Same as above, we can have multiple Renderers, for now, only `PDFRenderer`
 
 These 3 components are used in a simple **_ParseFormCommandHandler_**, we can have many other commands. 
 
-Because the utility takes in FROM and TO (file types), we can create the correct components where needed. 
-
 #### Graph structure in the parser
 The complex part of this, is to support a _dynamic structure_, where fields and sections can be mixed and generate content.
-For this, I used a `graph structure` inside the **_Parser_**, with lots of documentation comments on how it works.
-The basic idea is to build the content graph with parents and children, so we can traverse later. 
+For this, I used a `graph structure` inside the **_Parser_**, and the basic idea is to build the content graph with parents and children, so we can traverse later. 
 
 The structure is simple:
 * `ElementType` (enum) is extracted from the XML data: `form`, `field`, `caption`, `labels`, `label`, etc.
@@ -100,32 +96,16 @@ Example:
 }
 ```
 
-#### Comments in the code
-I wanted to have the code explained so that's why I left a lot of comments inside. 
-
 #### Testing
-To keep the time for this exercise at a normal level, I **did not include unit tests for the PDFRenderer** (and maybe some other types)
-
-But I did include
 * Unit tests for most of the components (usually same folder files with same name but _test)
 * Integration tests 
   * I also included a more complex scenario with a different XML structure
 
 #### Makefile
-I love makefiles and I included one for this as well. This allows anyone tio quickly build the binary, while running tests, linting, etc 
-
 Targets
 * all - does everything `[lint test build]`
 * individual `build`, `lint`, `test`
   * NOTE: `lint` has a dependency to `golangci-lint` - it will output this and the website to download it from 
-
-#### Assumptions
-* User submission file - like I explained above
-* I did not do a dropdown list in the output PDF - that would complicate the renderer more
-* I forced the order on the `labels` - map in go does not guarantee item insertion ordering 
-* I did not inject the logger into the components to keep them on the lighter side
-* I did not write all the tests, it would take a lot of time
-* The items on the XML have unique names - the only way to get to them with separate user submission file
 
 #### Libraries 
 * [Cobra](https://github.com/spf13/cobra) - for building great CLI

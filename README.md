@@ -1,4 +1,4 @@
-[![Build Status](https://github.com/alex-pricope/form-parser/actions/workflows/ci.yml/badge.svg)](https://github.com/alex-pricope/form-parser/actions/workflows/ci.yml)
+[![Build Status](https://github.com/alex-pricope/xml-pdf-parser/actions/workflows/ci.yml/badge.svg)](https://github.com/alex-pricope/xml-pdf-parser/actions/workflows/ci.yml)
 
 ## What is this? 
 This is an attempt at some online challenge that was sitting as a private repository for some time.
